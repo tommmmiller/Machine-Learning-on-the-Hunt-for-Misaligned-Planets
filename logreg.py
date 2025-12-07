@@ -66,7 +66,7 @@ def main():
 
     pipe = Pipeline([
     ("scaler", StandardScaler(with_mean=True, with_std=True)),  # refit inside pipeline
-    ("pca", PCA(n_components=k95, svd_solver="randomized", whiten=False, random_state=1234)),
+    # ("pca", PCA(n_components=k95, svd_solver="randomized", whiten=False, random_state=1234)),
     ("clf", LogisticRegression(
         solver="lbfgs", penalty="l2", C=1.0, max_iter=2000,
         class_weight="balanced", n_jobs=1, random_state=1234
